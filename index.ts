@@ -11,12 +11,7 @@ export const websocket = {
     open(peer) {
       console.log("[ws] open", peer);
       peer.send({ user: "server", message: `Welcome ${peer}!` });
-      peer.send(
-        Buffer.from(
-          "AAAADAAKHRgD596hRFffBA==",
-          "base64"
-        ),
-      );
+      peer.send(Buffer.from("AAAADAAKHRgD596hRFffBA==", "base64"));
       console.log("end open");
     },
 

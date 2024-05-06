@@ -71,6 +71,7 @@
 
         log("ws", "Connecting to", url, "...");
         ws = new WebSocket(url);
+        ws.binaryType = "arraybuffer";
 
         ws.addEventListener("message", (event) => {
           if (typeof event.data !== "string") {
